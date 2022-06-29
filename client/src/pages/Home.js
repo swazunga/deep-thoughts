@@ -10,7 +10,7 @@ const Home = () => {
   const { data: userData } = useQuery(QUERY_ME_BASIC);
   const thoughts = data?.thoughts || [];
   console.log(thoughts);
-  const loggedIn = true;
+  const loggedIn = Auth.loggedIn();
   return (
     <main>
       <div className="flex-row justify-space-between">
